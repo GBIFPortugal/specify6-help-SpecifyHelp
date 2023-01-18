@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../main.css" type="text/css" media="screen" rel="stylesheet">
+    <meta name="generator" content="Helen">
+<style type="text/css">
+<!--
+.style1 {
+  font-style: italic;
+}
+-->
+</style>
+    <title>Exportador de dados</title>
+  </head>
+  <body bgcolor="#ffffff">
+    <p>
+       &nbsp;
+    </p>
+    <table background="../images/topbar.png" border="0" width="100%">
+      <tbody>
+      <tr>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <h2>
+       <a name="data_exporter"></a>Exportador de Dados
+    </h2>
+    <p>
+    O aplicativo Exportador de dados é usado para construir, atualizar e exportar arquivos de dados para uso do IPT
+   ou um portal web. O termo 'compilar' refere-se ao processo que o Specify usa para carregar dados no
+   esqueleto, ou esquema, de um banco de dados. Antes que um arquivo de dados possa ser construído, um Mapeamento deve
+   primeiro ser criado, usando o Editor de Mapeamento de conjuntos de dados dentro de Specify. Se você não criou um
+   mapa, precisará fechar a ferramenta Exportador de dados, reabrir o Specify e criar o
+   mapa usando a ferramenta Mapeamento de dados. Para a documentação explicando como criar um
+   mapa, consulte <a href="../QueryBuilder/third_party.html">Publicação na Web</a>.
+    </p>
+    <p>
+    A ferramenta Exportador de Dados na verdade cria uma tabela, ou cache, no banco de dados contendo todos os
+   dados relevantes, com base no mapa que foi criado dentro do Specify.&nbsp; Esta tabela e
+   os dados são então indexados e exportados, juntamente com outros arquivos relevantes, para uso num portal da web.
+   Ou, o cache é exportado como um arquivo de texto delimitado por tabulação para importação no IPT.&nbsp;
+    </p>
+    <p>
+    O aplicativo Exportador de Dados está localizado no diretório bin, dentro do diretório do Specify, que armazena os arquivos executáveis ​​para o Specify. Clique duas vezes em <em>Exportador de dados</em>
+   (ou selecione-o em Iniciar/Arquivos de Programas/Specify no Windows) para iniciar a ferramenta. Os usuários são
+   obrigados a fazer login usando seu nome de usuário e senha especificados.
+    </p>
+    <p>
+       O Exportador de dados abre uma tabela de três colunas com o botão de ação.
+    </p>
+    <p align="center">
+       <img src="../../images/export_tool.png">
+    </p>
+    <p class="imgcaption" align="center">
+       Ferramenta Exportador de dados
+    </p>
+    <ul type="disc">
+      <li>
+        A <strong>coluna mapeamento</strong>da tabela indica o nome de ambos, do mapeamento e da tabela.
+      </li>
+      <li style=" list-style-type: none; list-style-image: none;">
+        <br>
+      </li>
+      <li>
+        A <strong>Coluna Ultima atualização</strong> lista a data e o tempo da atualização de cache mais recente.
+      </li>
+      <li style=" list-style-type: none; list-style-image: none;">
+        <br>
+      </li>
+      <li>
+        A coluna<strong> Estado</strong> indica se o cache já foi construido, atualizado, ou desatualizado. Se o cache estiver desatualizado, será indicado o número de linhas que precisam de atualização. O número de linhas também irá indicar as linhas que já foram apagadas, editadas ou adionadas a base de dados. Essa informação reflete o conteúdo da base de dados no perído em que o Exportador foi criado; não irá indicar mudanças que ocorrem enquanto o Exportador estiver em funcionamento.
+      </li>
+    </ul>
+    <p>
+       &nbsp;
+    </p>
+    <h3>
+       <strong>Ações disponíveis</strong>
+    </h3>
+    <ul>
+      <li>
+        <strong>Mostrar SQL</strong> - Clicar neste botão para um mapeamento em que o cache estiver sido completado para gerar uma caixa de diálogo, mostrando uma afirmação escolhida em SQL que poderá ser copiado e usado quando as definições de conexões da base de dados ao cache para o IPT e outros provedores.
+        <blockquote>
+          <p>
+             <em><strong>Nota</strong></em>: O SQL está na estrutura do cache. Se o cache tiver de ser reconstruido e mapeamentos tiverem de ser alterados, a aformação em SQL não irá refletir as mudanças até que o cache seja atualizado.
+          </p>
+        </blockquote>
+      </li>
+      <li>
+        <strong>Construção/Atualização</strong> - Isso irá atualizar o cache.&nbsp;Quando o cache é construído ou atualizado está sendo escrito na base de dados; portanto informações de como nome de usuário e senha serão necessários antes que o Specify possa terminar a tarefa.
+      </li>
+    </ul>
+    <blockquote>
+      <p>
+      Para caches que não precisam ser construídos, apenas as linhas desatualizadas são atualizadas. Isto é
+     significativamente mais rápido do que uma compilação inicial, que pode levar muito tempo.&nbsp; As atualizações
+     não são permitidas para mapeamentos que estão sendo editados ou atualizados por outro usuário; portanto, os usuários
+     devem fechar todos os mapeamentos antes de atualizar.
+      </p>
+      <blockquote>
+        <p>
+           <b><i>Nota:</i></b> Construir/atualizar o cache precisará o nome de usuário e senha do TI (MySQL).
+           <br>
+        </p>
+      </blockquote>
+    </blockquote>
+    <ul>
+      <li>
+        <strong>Exportar</strong> - Aqui pode exportar o conteúdo atual atual do cache para um arquivo de texto delimitado por tabulação para IPT.<br>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>Exportar para o Portal</b> - Arquivos para Solr e para o Portal serão gerados e exportados como ficheiros .zip.<br>
+        <br>
+      </li>
+    </ul>
+    <p>
+       <em><br>
+       Cancelamento de operação</em> - Poderá cancelar uma atualização or exportação ao clicar no botão<img src=
+      "../../images/close_hover.png">&nbsp;(fechar) para fechar a janela do aplicativo. Você terá que confirmar o cancelamento. Se cancelar, terá de começar de novo, a próxima ver que realizar a operação.
+    </p>
+    <blockquote>
+      <p>
+         <strong><span class="style1">Note</span></strong><span class="style1">:</span>&nbsp; Se cancelar uma atualização que precisa ser reconstruída, o cache pré existente será apagado. 
+      </p>
+    </blockquote>
+    <p>
+       &nbsp;
+    </p>
+  </body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link type="text/css" media="screen" href="../../main.css" rel="stylesheet">
+    <meta name="generator" content="Helen">
+<style type="text/css">
+<!--
+..style2 {
+  color: #FF00FF;
+}
+-->
+</style>
+    <title>Pick Lists</title>
+  </head>
+  <body bgcolor="#ffffff">
+    <table border="0" width="100%" background="../../images/topbar.png">
+      <tr>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+    </table>
+    <h2>
+    Listas de seleção definidas pelo usuário
+ </h2>
+ <p>
+    Qualquer campo no qual os dados são limitados a um vocabulário controlado é chamado de <em>
+   Lista de Seleção</em>. Por exemplo, navegar no Specify com o campo Título do Agente limitado às opções de:
+   Ass. Diretor, Curador, Dr., Sr., Sra. e Sra.
+ </p>
+ <p>
+    Novas listas de seleção definidas pelo usuário podem ser criadas para campos existentes, mas o campo na área afetada
+   do formulário não será atualizado, até que o próprio formulário tenha sido editado. Por esse motivo, listas de seleção
+   NÃO devem ser definidas até que o novo formulário contendo a lista de seleção, tenha sido importado para
+   o Specify. Se as listas de seleção forem definidas sem serem incluídas no formulário existente, os dados inseridos
+   no formulário existente não serão salvos no banco de dados.
+ </p>
+ <p>
+    Neste momento, o Specify 6 não inclui um Editor de formulários, como no Specify 5.
+   É importante notar que os formulários foram criados por programação para serem extremamente flexíveis
+   e pode ser exportado como XML e editados localmente por um editor XML experiente ou enviado por e-mail
+   para a equipe Specify, para assistência de customização. Para exportar um formulário, consulte <a href=
+   "../Import/import_export.html">Importando/Exportando</a>. Membros das coleções especificadas
+   no consórcio podem entrar em contato com nosso suporte em <b>support@specifysoftware.org</b> para obter ajuda
+   editando seus formulários.
+
+    </p>
+    <p>
+    As listas de seleção definidas no Specify são chamadas de listas de seleção do sistema. Novas listas de seleção
+   criadas pelo usuário são chamadas de Listas de Seleção Definidas pelo Usuário. O texto a seguir descreve
+   as etapas para criar uma lista de seleção definida pelo usuário. Para obter informações sobre listas de seleção do sistema,
+   consulte as <a href="../PickList/system_picklist.html">Listas de seleção do sistema.</a>
+ </p>
+ <p>
+    Quaisquer alterações na lista de seleção são refletidas apenas na coleção atual. O Specify permite&nbsp;escolher
+   listas a serem exportadas e importadas, permitindo compartilhamento rápido entre coleções e
+   comunidades de coleta. Esse recurso também permite que a equipe Specify crie e compartilhe listas de seleção
+   ao mesmo tempo que criam formulários personalizados. Mais informações sobre como importar e exportar listas de seleção
+   podem ser encontradas no texto abaixo.
+ </p>
+ <p>
+    &nbsp;
+ </p>
+ <h3>
+    <a name="user_defined_pick_lists" id="user_defined_pick_lists"></a>Criação e edição de usuário de
+   Listas de seleção definidas
+ </h3>
+ <blockquote>
+   <p>
+      Qualquer campo de string pode ser configurado como uma lista de seleção.
+      </p>
+      <p>
+      Adicione, exclua e edite as listas de seleção no Editor de lista de seleção encontrado em <em>Sistema &gt;
+     Configuração de esquema.</em> A ferramenta Configuração de esquema está disponível apenas para usuários em um
+     gerente ou grupo de administradores.
+   </p>
+   <ul>
+     <li>
+       Escolha Inglês como idioma.
+     </li>
+     <li style="list-style-type: none; list-style-image: none;">
+       <br>
+     </li>
+     <li>
+       Clique no botão <em>Editar um esquema</em>.
+     </li>
+   </ul>
+   <p>
+      A ferramenta de configuração de esquema será aberta.
+   </p>
+   <ul>
+     <li>
+       Escolha uma tabela na lista de tabelas.
+     </li>
+     <li style="list-style-type: none; list-style-image: none;">
+       <br>
+     </li>
+     <li>
+       Escolha um campo na lista de campos.
+     </li>
+     <li style="list-style-type: none; list-style-image: none;">
+       <br>
+     </li>
+     <li>
+       Escolha <em>lista de seleção</em> no tipo de formato combo box.
+     </li>
+     <li style="list-style-type: none; list-style-image: none;">
+       <br>
+     </li>
+   </ul>
+   <p>
+      A seguinte combo box e botão são exibidos:
+   </p>
+   <p align="center">
+      <img src="../../images/picklist_boxes.png" width="474" height="32">
+   </p>
+   <p align="center" class="imgcaption">
+      Tipo de formato de campo
+   </p>
+      <p>
+      A segunda combo box é usada para vincular a lista de seleção recém-criada ao campo. O botão (...)
+     abre o Editor de Lista de Seleção.
+   </p>
+   <p>
+      &nbsp;
+   </p>
+ </blockquote>
+ <h3>
+    <strong><a name="add_picklist" id="add_picklist">Adicionar uma lista de opções</a></strong>
+ </h3>
+ <blockquote>
+   <p>
+      Para adicionar uma nova seleção de dentro do editor da lista de seleção, deixe a segunda ccombo box como 'nenhuma'
+     e clique no botão (...).
+   </p>
+   <ul>
+     <li>
+       Escolha o botão <img height="16" alt="a" src="../../images/add.png" width="16"> (adicionar).
+     </li>
+   </ul>
+   <p>
+      Uma segunda caixa de diálogo será aberta para configurar a lista de seleção. Existem três tipos de listas de seleção,
+     todos com configurações diferentes:
+   </p>
+   <p>
+      1. <u>Itens definidos pelo usuário</u> é uma lista predefinida. Os itens neste tipo de lista de seleção são
+     criado pelo usuário (vocabulário controlado) ou criado quando os valores são digitados em um
+     campo.
+   </p>
+   <blockquote>
+     <p>
+        Uma lista de seleção pré-definida é muito útil para controlar os dados exatos inseridos em um campo.
+        Um bom exemplo disso é o Nome do Estado do Tipo no formulário de determinações. Qualquer pessoa inserindo
+       determinações é limitada ao mesmo conjunto de opções de dados.
+        </p>
+        <p>
+           Para criar uma <strong>lista predefenida de itens</strong>:
+        </p>
+        <ul>
+          <li>
+            Escolha <strong><em>Itens definidos pelo usuário</em></strong> no submenu Tipo.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Digite um nome na caixa de texto <strong>Nome</strong>.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Marque a caixa de seleção <strong><em>Somente leitura</em></strong>.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Clique no botão <img height="16" alt="a" src="../../images/add.png" width="16"> (adicionar)
+             na seção Itens.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            <strong>Digite um título</strong> aparecerá no formulário.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            <strong>Digite um valor</strong> é armazenado no banco de dados. É uma boa prática não
+             usar espaços. O Valor existe para que posteriormente o Título possa ser editado sem
+             necessidade de alterar o valor na base de dados.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+        </ul>
+        <p>
+           Use uma lista de seleção que é criada à medida que os valores são digitados no campo quando um
+           uma lita de slecção é obrigatória, mas também é necessário permitir que os usuários insiram novos valores.
+        </p>
+        <p>
+          Para criar uma <strong>lista de seleção criada a partir dos dados inseridos</strong>:
+        </p>
+        <ul>
+          <li>
+            Use as etapas acima, mas <strong>Não</strong> marque a opção <strong>Somente leitura</strong>
+             caixa.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Campo <strong>Limite de tamanho</strong> - limita o número de valores na lista de seleção. Uma vez
+             a lista atingiu este número de valores o valor mais antigo será descartado da lista
+             lista.<br>
+          </li>
+        </ul>
+      </blockquote>
+      <p>
+        2. <u>Tabela inteira</u> permite que todos os valores em uma tabela formatada sejam listados. Isto é uma
+         ferramenta útil quando o campo precisa vincular a um registro inteiro, mas a lista de valores é
+         pequena e uma Query Combo box não é necessária.
+      </p>
+      <blockquote>
+        <p>
+          Para criar uma lista <strong>Tabela inteira</strong>:
+        </p>
+        <ul>
+          <li>
+            Escolha <em>Tabela inteira</em> na combo box Tipo.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Digite um nome para a lista de seleção na caixa de texto Nome.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Escolha uma Tabela na caixa de combinação Nome da Tabela.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Escolha um Formatador na caixa Formatador; isso normalmente oferecerá apenas uma único
+             escolha.
+          </li>
+        </ul>
+      </blockquote>
+      <p>
+        3. <u>Campo da tabela</u> usa os valores de um campo dentro de uma tabela. Criando uma seleção
+         lista de um campo só é viável quando houver um pequeno número de valores. Se o
+         número ultrapassar 12 sugere-se que o campo seja vinculado a uma Combo Box de Consulta dentro do
+         formulário em vez de uma lista de seleção.
+      </p>
+      <blockquote>
+        <p>
+          Para criar uma lista <strong>Campo da tabela</strong>:
+        </p>
+        <ul>
+          <li>
+            Escolha <em>Campo da tabela</em> na combo box Tipo.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Digite um nome para a lista de seleção na caixa Nome.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Escolha uma Tabela na combo box Nome da Tabela.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Escolha um Formatador na caixa Formatador - na maioria dos casos, não haverá mais de
+            uma escolha para isso.
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Escolha um campo na combo box Nome do campo.
+          </li>
+        </ul>
+        <p>
+           Uma vez criada a lista de seleção, ela precisará ser vinculada ao campo.
+        </p>
+        <ul>
+          <li>
+            Clique na segunda combo box (atualmente exibindo 'Nenhum').
+          </li>
+          <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Escolha o nome da lista de seleção na lista.
+          </li>
+        </ul>
+      </blockquote>
+    </blockquote>
+    <ul>
+      <li style=" list-style-type: none; list-style-image: none;">
+        <br>
+      </li>
+    </ul>
+    <h3>
+        <strong>Editar uma lista de seleção</strong>
+     </h3>
+     <blockquote>
+       <p>
+          Para editar uma lista de seleção no Editor de lista de seleção:
+       </p>
+       <ul>
+         <li>
+           Clique no botão (...) para abrir o Editor de Lista de Seleção.
+         </li>
+         <li style=" list-style-type: none; list-style-image: none;">
+           <br>
+         </li>
+         <li>
+           Clique no <img height="16" alt="edit" src="../../images/Edit-2-16x16.png" width="16">
+           botão (editar).
+         </li>
+         <li style=" list-style-type: none; list-style-image: none;">
+           <br>
+         </li>
+         <li>
+           Use as mesmas informações em <a href="#add_picklist">Adicionar uma lista de seleção</a> para alterar o
+           configuração de uma lista de seleção existente.
+         </li>
+       </ul>
+     </blockquote>
+    <p>
+       &nbsp;
+    </p>
+    <h3>
+       <a name="user_picklist_import" id="user_picklist_import"></a>Importar/Exportar uma Lista de Seleção
+    </h3>
+    <blockquote>
+      <p>
+         As definições da lista de seleção em uma coleção podem ser exportadas como um arquivo xml e importadas para uso
+        em uma nova coleção. Dessa forma, as listas de seleção podem ser compartilhadas dentro de uma instituição,
+        comunidade de coleta, ou entre a equipe do Specific (que está criando formulários personalizados) e
+        usuários.
+      </p>
+      <p>
+         A função Importar e Exportar está disponível apenas no Pick List Editor encontrado no
+        Ferramenta de configuração de esquema.
+      </p>
+      <blockquote>
+        <p>
+           <strong><em>Observação:</em></strong> Se já existir uma lista de seleção com o mesmo nome, o
+          a lista de seleção importada substituirá a existente.
+        </p>
+        <p>
+           <strong><em>Observação:</em></strong> os valores em uma lista de seleção não serão importados em
+          os tipos de lista de seleção Tabela inteira ou Campo da tabela. Somente a definição da lista de seleção será
+          ser importados para esses tipos de listas de seleção.
+        </p>
+        <p>
+           <u>Importar</u>
+        </p>
+        <ol>
+          <li>
+            Clique no botão <strong><em>Importar</em></strong>.
+          </li>
+       <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Escolha o arquivo xml da lista de seleção que deseja importar do gerenciador de arquivos.
+          </li>
+       <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Clique no botão <strong><em>Abrir</em></strong>.
+          </li>
+        </ol>
+        <p>
+           A lista de seleção será adicionada à lista de listas de seleção definidas pelo usuário ou substituirá
+          lista de seleção existente.
+        </p>
+        <blockquote>
+          <p>
+             <strong><em>Observação:</em></strong> Os formulários devem ser editados para mostrar as listas de seleção. Se você importar
+            uma nova lista de seleção, mas não edite o campo em seu formulário, você não verá a lista de seleção.
+          </p>
+        </blockquote>
+        <p>
+           &nbsp;
+        </p>
+        <p>
+           <u>Exportar</u>
+        </p>
+        <ol>
+          <li>
+            Clique no botão <strong><em>Exportar</em></strong>
+          </li>
+       <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Selecione a(s) lista(s) de seleção que deseja exportar marcando-as na caixa de diálogo.
+          </li>
+       <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+        </ol>
+        <blockquote>
+          <p>
+             <strong><em>Selecionar tudo</em></strong> selecionará todas as listas de seleção na caixa de diálogo.
+            <strong><em>Desmarcar tudo</em></strong> desmarcará todas as listas de seleção na caixa de diálogo.
+          </p>
+        </blockquote>
+        <ol>
+          <li>
+            Clique no botão <strong><em>OK</em></strong>.
+          </li>
+       <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Escolha um local para o arquivo da lista de seleção no gerenciador de arquivos.
+          </li>
+       <li style=" list-style-type: none; list-style-image: none;">
+            <br>
+          </li>
+          <li>
+            Clique no botão <strong><em>Salvar</em></strong>.
+          </li>
+        </ol>
+        <blockquote>
+          <p>
+             <strong><em>Observação:</em></strong> a lista de seleção será salva como:
+            'disciplinename'_'collectionname'.xml
+          </p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <p>
+       &nbsp;
+    </p>
+  </body>
+</html>

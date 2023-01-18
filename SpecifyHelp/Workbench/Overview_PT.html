@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="../../main.css" rel="stylesheet" type="text/css" media="screen">
+    <meta name="generator" content="Helen">
+<style type="text/css">
+<!--
+..style1 {
+  font-style: italic;
+}
+-->
+</style>
+    <title>Visão geral do WorkBench</title>
+  </head>
+  <body>
+    <p>
+       &nbsp;
+    </p>
+    <table background="../../images/topbar.png" border="0" width="100%">
+      <tbody>
+      <tr>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <h2>
+    Bem-vindo ao WorkBench do Specify 6
+ </h2>
+ <p>
+    O WorkBench foi lançado para a comunidade como uma ferramenta autônoma em 2007. Isto
+   foi o resultado de muitas entrevistas e avaliações que solicitaram uma ferramenta para inserir e
+   limpar dados<em>antes</em> de serem catalogados no Specify. Algumas coleções exigiam tal
+   ferramenta para inserir dados de missões, outros queriam uma ferramenta pequena e independente para levar em campo
+   e outros ainda precisavam manipular seus dados antes de catalogá-los no Specify 6.
+ </p>
+ <p>
+    O WorkBench foi criado para atender a essas necessidades específicas da comunidade. Como um
+   componente de manipulação de dados pré-catálogados no Specify 6, o WorkBench oferece os seguintes
+   recursos:
+ </p>
+ <ul>
+   <li>
+     Importar arquivos CSV ou MS Excel
+   </li>
+   <li>
+     Vincular uma imagem a um registro
+   </li>
+   <li>
+     Visualizar e editar em uma visualização de grade ou formulário
+   </li>
+   <li>
+     Visualizar informações de objetos georreferenciados em um mapa ou no Google Earth
+   </li>
+   <li>
+     Converter e padronizar os formatos Latitude e Longitude
+   </li>
+   <li>
+     Georeferência
+   </li>
+   <li>
+     Exportar um conjunto de dados e importar novamente sem precisar remapear o conjunto de dados
+      </li>
+    </ul>
+    <p>
+    Todo o WorkBench agora faz parte do Specify.
+ </p>
+ <p>
+    Isso torna o carregador de dados numa maneira rápida e fácil de transferir dados de um arquivo MS Excel ou CSV
+   em Specify, primeiro <a href="../Workbench/ImportData.html">importando</a> os dados para o
+   WorkBench.
+ </p>
+ <p>
+    O WorkBench tem um limite de 4000 registros que podem ser carregados de uma só vez.
+ </p>
+ <h3>
+   <br>
+    Usando o WorkBench
+ </h3>
+ <p>
+    O WorkBench funciona dentro do Specify 6 e aproveita os mesmos componentes; Barra Lateral,
+   arrastando e soltando, guias, etc.
+ </p>
+ <p>
+   <br>
+ </p>
+ <h3>
+    Apresentando conjuntos de dados
+ </h3>
+ <p>
+    Os dados são inseridos, editados, organizados e armazenados em um conjunto de dados. Os dados dentro de um conjunto de dados são
+   organizados em títulos de coluna. O WorkBench oferece muitos recursos para manipular os
+   dados em Conjuntos de Dados antes de serem catalogados no Specify 6.
+ </p>
+ <p>
+ Um dos mais importantes desses recursos é a organização dos dados nos campos do Specify. Isso não é necessário apenas para que outros recursos do WorkBench funcionem corretamente,
+mas também garante que os dados sejam carregados corretamente no Specify 6. Os títulos das colunas para
+novos Conjuntos de Dados são escolhidos de uma lista de campos Specify correspondentes aos dados do modelo Specify. Os títulos das colunas podem ser renomeados, mas ainda manterão um link para o campo original
+Specify. Esses links são chamados de 'mapas'. Esses mapas também podem ser editados.
+</p>
+<p>
+ Quando os dados são importados de um arquivo CSV ou MS Excel, o WorkBench lê o arquivo existente,
+cabeçalhos de colunas em um conjunto de dados e mapeia para campos Specify com um 'automapeador' integrado.
+Quaisquer cabeçalhos de coluna que o WorkBench não reconheça e o 'automapeamento' podem ser manualmente
+mapeados e editados.
+</p>
+<p>
+ Os conjuntos de dados podem ser editados como uma tabela ou um formulário.
+</p>
+<p>
+ O WorkBench também permite que cada registro seja vinculado a uma imagem em um conjunto de dados. O vinculo
+das imagens são exibidas em uma janela de imagem. Isso é particularmente útil para inserir dados de
+cartões de catálogo ou etiquetas de espécimes.
+</p>
+<h4>
+ &nbsp;
+</h4>
+<h4>
+ Começando
+    </h4>
+    <p>
+    Os conjuntos de dados são criados usando diferentes ações, dependendo do fluxo de trabalho. A seguir
+   uma tabela com a lista de fluxos de trabalho e a soluções relevantes:
+ </p>
+ <table border="1" cellpadding="8" width="75%">
+   <tbody>
+   <tr>
+     <td align="left" valign="top">
+       <p align="esquerda">
+          <u><strong>Fluxo de trabalho</strong></u>
+       </p>
+     </td>
+     <td align="left" valign="top">
+       <p align="esquerda">
+          <u><strong>Ação</strong></u>
+       </p>
+     </td>
+   </tr>
+   <tr>
+     <td align="left" valign="top">
+       Tenho dados em uma planilha do Excel.
+     </td>
+     <td align="left" valign="top">
+       A ação "Importar dados" importará os dados para um conjunto de dados e mapeará os dados existentes
+       para os campos Specify.
+     </td>
+   </tr>
+   <tr>
+     <td align="left" valign="top">
+       Eu tenho dados em um formato de banco de dados.
+     </td>
+     <td align="left" valign="top">
+       Exporte os dados como um arquivo CSV e use a ação "Importar dados" para importar os dados para um
+       Conjunto de dados e mapeie as colunas existentes para campos Specify.
+     </td>
+   </tr>
+   <tr>
+     <td align="left" valign="top">
+       Tenho dados de missões (cartões, etiquetas, páginas de catálogo) como imagens.
+     </td>
+     <td align="left" valign="top">
+       A ação "Importar imagens" criará um conjunto de dados com cada imagem de cartão vinculada a um único
+       registro.
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top">
+        Tenho dados de missões em cartões físicos, etiquetas ou páginas de catálogo.
+      </td>
+      <td align="left" valign="top">
+        A ação "Novo conjunto de dados" permitirá que você escolha os títulos das colunas no Specify
+        e crie um conjunto de dados para inserir seus dados.
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        Tenho informações de localidade em notas de campo.
+      </td>
+      <td align="left" valign="top">
+        A ação "Novo conjunto de dados" permitirá que você escolha os títulos das colunas no Specify
+        e crie um conjunto de dados para inserir seus dados.
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        Estarei visitando uma Instituição colaboradora e quero levar meus dados comigo.
+      </td>
+      <td align="left" valign="top">
+        Salve todo o componente WorkBench e os conjuntos de dados que o acompanham em um meio portátil
+        (chave USB, CD, etc).
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        Estarei visitando uma Instituição colaboradora e quero levar meus dados comigo, mas eles
+        usam um Mac e eu uso um PC.
+      </td>
+      <td align="left" valign="top">
+        Sem problemas! O WorkBench funciona da mesma forma em sistemas que usam Windows, Mac OS X, bem como
+        Linux. Basta salvar todo o componente WorkBench e os conjuntos de dados que o acompanham em um USB
+       e executar o WorkBench no Macintosh do seu colaborador.
+      </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top">
+        Estarei visitando uma Instituição colaboradora e quero mesclar nossos dados, mas os dados deles
+        estarão no Excel.
+      </td>
+      <td align="left" valign="top">
+        A ação "Exportar conjunto de dados" exportará seus dados para uma planilha do Excel, que pode
+        em seguida, ser preenchido com seus dados. Depois disso, o arquivo pode ser importado como um único conjunto de dados
+        no WorkBench.
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        Desejo verificar meus dados que existem em um banco de dados que não esteja no Specify.
+      </td>
+      <td align="left" valign="top">
+        <p>
+           Exporte os dados como um arquivo CSV do seu banco de dados e use a ação "Importar dados"
+          para importar os dados para um conjunto de dados do WorkBench mapeando as colunas existentes nos campos do Specify. Em seguida, você pode usar os recursos de relatório para verificar seus dados.
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <p>
+     &nbsp;
+  </p>
+</body>
+</html>

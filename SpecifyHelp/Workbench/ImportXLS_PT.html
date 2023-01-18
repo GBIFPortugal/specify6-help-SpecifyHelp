@@ -1,0 +1,481 @@
+<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link href="../../main.css" rel="stylesheet" type="text/css" media="screen">
+    <meta name="generator" content="Helen">
+    <title>Importar de XLS</title>
+  </head>
+  <corpo>
+    <table width="100%" border="0" background="../../images/topbar.png">
+      <tr>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+    </table>
+    <h2>
+       Importando dados de um arquivo MS Excel
+    </h2>
+    <p>
+       O WorkBench pode importar facilmente dados de um arquivo MS Excel para um novo conjunto de dados.
+    </p>
+    <p>
+       O WorkBench usa HSSF como a porta para o formato de arquivo do Microsoft Excel 97(-2003) (BIFF8) para
+      Java, que tem capacidade de leitura e gravação. (O suporte para arquivos .xlsx do Excel 2007 está
+      em andamento). Consulte a página do projeto HSSF para obter mais informações.
+    </p>
+    <p>
+       <em><strong>Nota:</strong></em>
+    </p>
+    <ul>
+      <li>
+        As alterações feitas nos dados no WorkBench não serão refletidas no arquivo MS Excel original.
+      </li>
+      <li>
+        O WorkBench tem um máximo de 4.000 linhas. Arquivos que incluem mais de 4.000 linhas não serão
+        importados.
+      </li>
+      <li>
+        Os arquivos do Excel que contêm mais de 4.000 linhas podem ser divididos usando o <a href=
+        Ferramenta "../Uploading/splitter.html">Divisor de arquivos do Specify</a>.
+      </li>
+    </ul>
+    <p align="center" class="imgcaption">
+       &nbsp;
+    </p>
+    <p>
+       Para começar, clique na ação Importar Dados na barra lateral e escolha o arquivo de importação na
+      caixa de diálogo de arquivo.
+    </p>
+    <p>
+      Para importar corretamente os dados de um arquivo MS Excel, o WorkBench deve primeiro determinar se o
+     os dados incluem cabeçalhos de coluna. A seguinte caixa de diálogo de informações aparecerá:
+   </p>
+   <p align="center">
+      <img src="../images/importdialog.png" largura="617" altura="367">
+   </p>
+   <p align="center" class="imgcaption">
+      Importar do MS Excel
+   </p>
+   <p align="center" class="imgcaption">
+      &nbsp;
+   </p>
+   <p>
+      A janela de Visualização de dados lê e exibe uma amostra dos títulos das colunas e dados do
+     arquivo a ser importado. Se o arquivo não contiver cabeçalhos de coluna, as colunas serão rotuladas em
+     ordem numérica (Coluna 1, Coluna 2, etc.). Verifique a caixa 'Primeira linha contém cabeçalhos de coluna',
+     de acordo com como o arquivo é exibido na janela Visualização de dados.
+   </p>
+   <p>
+      A próxima etapa no processo de importação é 'mapear' os cabeçalhos das colunas do arquivo de importação para
+     os campos no modelo de dados Specify.
+   </p>
+   <p>
+      &nbsp;
+   </p>
+   <h3>
+      O arquivo <em>inclui</em> cabeçalhos de coluna
+   </h3>
+   <p>
+      O Workbench inclui um recurso de '<span class="index">mapeamento automático</span>' que primeiro
+     identifica os títulos das colunas e os compara com os conjuntos de dados existentes. Se os títulos das colunas do arquivo de importação corresponder aos de um conjunto de dados existente, a seguinte caixa de diálogo será aberta:
+   </p>
+   <p align="center">
+      <img src="../images/NewDataSet.png" largura="340" altura="284">
+   </p>
+   <p align="center" class="imgcaption">
+      Novos títulos de coluna do conjunto de dados
+   </p>
+   <p>
+      Para reutilizar o 'mapa' de um conjunto de dados existente, selecione o botão 'Usar um mapeamento de conjunto de dados existente' e escolha o conjunto de dados na lista fornecida. A caixa de diálogo Propriedades do conjunto de dados
+     abrirá em seguida, para nomear e descrever o novo conjunto de dados.
+   </p>
+    <p>
+      Para criar um novo mapa para o conjunto de dados, selecione o botão 'Criar novo mapeamento do conjunto de dados' e
+      Clique OK'.
+    </p>
+    <p>
+       <em><strong>Nota:</strong></em> os mapeamentos só podem ser reutilizados se o arquivo XLS que está sendo importado
+      contém o mesmo número ou menos colunas que o mapeamento. Em outras palavras, se você dividir um arquivo XLS
+      em dois arquivos menores para importação, e ao importar o primeiro arquivo XLS não mapear todos as
+      colunas, as colunas não mapeadas são descartadas. Ao importar o segundo arquivo XLS, você
+      <em>NÃO</em> terá a opção de reutilizar o mapeamento criado para o primeiro arquivo XLS. Para
+      reutilizar o mapeamento você deve primeiro excluir as colunas não mapeadas/descartadas do arquivo XLS
+      antes de importá-lo para o WorkBench.
+    </p>
+    <p>
+       &nbsp;
+    </p>
+    <p>
+       O 'auto-mapeador' então compara os títulos das colunas importadas com os campos Specify e
+      'mapeia' as colunas para campos correspondentes.
+    </p>
+    <p align="center">
+       <img src="../images/automappededitor.png" width="720" height="384">
+    </p>
+    <p align="center" class="imgcaption">
+      Cabeçalhos de coluna mapeados automaticamente no Editor de mapeamento de conjunto de dados
+   </p>
+   <p>
+      &nbsp;
+   </p>
+   <p>
+      Os títulos das colunas do arquivo de importação aparecem em 'Colunas do conjunto de dados' no lado direito
+     da caixa de diálogo e são mapeados para 'Campos do Specify' à esquerda.
+   </p>
+   <p>
+      <span class="index">Títulos de coluna</span> que mapeiam para Campos Specify exibem um <img src=
+     "../images/linked.png" width="32" height="16">&nbsp;(linked) ícone.
+   </p>
+   <p>
+      Os cabeçalhos de coluna que não foram mapeados automaticamente terão o aviso 'Para ser descartado' exibido em
+     'Campos do Specify'. Os cabeçalhos de coluna não mapeados serão excluídos se não forem mapeados para um
+     campo Specify antes de clicar em 'OK'.
+   </p>
+   <p>
+      Os botões na caixa de diálogo permitem que as colunas sejam mapeadas, não mapeadas, adicionadas, excluídas e
+     reordenadas.
+   </p>
+   <p>
+     <br>
+   </p>
+   <table width="500" border="1" cellspacing="1" cellpadding="6">
+     <tr>
+       <td>
+         <u><strong>Ícone</strong></u>
+       </td>
+       <td>
+         <u><strong>Nome</strong></u>
+       </td>
+       <td>
+         <u><strong>Resultado</strong></u>
+       </td>
+     </tr>
+     <tr>
+       <td largura="50">
+         <img src="../images/Map16x16.png" alt="map" width="16" height="16">
+       </td>
+       <td largura="100">
+         <span class="index">Mapa</span>
+       </td>
+       <td>
+         Adiciona o campo à lista de colunas.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="../images/Unmap16x16.png" alt="unmap" width="16" height="16">
+        </td>
+        <td>
+          <span class="index">Não mapear</span>
+        </td>
+        <td>
+          Remove o campo da lista de colunas.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="../images/ReorderUp16x16.png" alt="reorderup" width="16" height="16">
+        </td>
+        <td>
+          <span class="index">Reordenar acima</span>
+        </td>
+        <td>
+          Move o campo selecionado para cima.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="../images/ReorderDown16x16.png" alt="reorderdown" width="16" height="16">
+        </td>
+        <td>
+          <span class="index">Reordenar abaixo</span>
+        </td>
+        <td>
+          Move o campo selecionado para cima.
+        </td>
+      </tr>
+    </table>
+    <p>
+       &nbsp;
+    </p>
+    <p>
+      Para mapear uma coluna de conjunto de dados não mapeada para um campo Specify:
+   </p>
+   <ol>
+     <li>
+       Clique na coluna na janela do lado direito para selecioná-la.
+     </li>
+     <li>
+       Clique no Tipo de Dados para exibir os campos associados na janela 'campo Specify'.
+     </li>
+     <li>
+       Clique no campo Specify necessário para selecioná-lo.
+     </li>
+     <li>
+       Clique no botão <img src="../images/Map16x16.png" alt="map" width="16" height="16"> (mapa).
+     </li>
+   </ol>
+   <p>
+      Para não mapear uma coluna de um campo:
+   </p>
+   <ol>
+     <li>
+       Clique na coluna na janela do lado direito para selecioná-la.
+      </li>
+      <li>
+        Clique no botão<img src="../images/Unmap16x16.png" alt="unmap" width="16" height="16"> (não mapear).
+      </li>
+    </ol>
+    <p>
+       Para adicionar uma coluna
+    </p>
+    <ol>
+      <li>
+        Clique no Tipo de Dados para mostrar os campos Specify na janela 'Campos'.
+      </li>
+      <li>
+        Clique no campo Specify.
+      </li>
+      <li>
+        Clique no botão <img src="../images/Map16x16.png" alt="map" width="16" height="16"> (mapa).
+      </li>
+    </ol>
+    <p>
+       Um ícone <img src="../images/linked_right.png" alt="link" width="32" height="16">&nbsp;(link)
+      confirma que a coluna e o campo são o mesmo título.
+    </p>
+    <blockquote>
+      <p>
+         <em><strong>Nota:</strong></em> um campo só pode ser mapeado uma vez. Campos Specify mapeados
+        exibirão uma marca de seleção verde ao lado de seu nome na lista, confirmando que
+        eles estão em uso.
+      </p>
+      <p>
+        <em><strong>Nota:</strong></em> Ao importar informações do Taxon, use apenas
+       Tabela de Taxon no editor de mapeamento.
+     </p>
+     <p>
+        <em><strong>Nota:</strong></em> A tabela Agente no editor de mapeamento só pode ser usada para
+       informações do agente. Ao fazer upload de informações do agente junto com informações de objeto de coleção
+       use os campos Título do Catalogador, Nome, Nome do meio e Sobrenome na
+       Tabela de objetos de coleção.
+     </p>
+   </blockquote>
+   <p>
+      &nbsp;
+   </p>
+   <p>
+      Quando todas as Colunas estiverem mapeadas e ordenadas corretamente, clique no botão 'OK'.
+   </p>
+   <p>
+      Conclua o processo de importação nomeando e descrevendo o novo conjunto de dados:
+   </p>
+   <p align="center">
+      <img src="../images/datasetproperties.png">
+   </p>
+   <p align="center" class="imgcaption">
+      Propriedades do conjunto de dados
+    </p>
+    <p>
+       &nbsp;
+    </p>
+    <h3>
+      O arquivo <em>NÃO</em> inclui títulos de coluna
+   </h3>
+   <p>
+      Arquivos de importação que não contêm cabeçalhos de coluna não podem ser 'auto-mapeados' para campos do
+     Specify. As colunas são rotuladas de acordo com sua ordem numérica e precisam ser manualmente
+     mapeadas.
+   </p>
+   <p align="center">
+      <img src="../images/nonamesmap.png">
+   </p>
+   <p align="center" class="imgcaption">
+      Mapa do arquivo de importação sem títulos de coluna
+   </p>
+   <p align="esquerda">
+      &nbsp;
+   </p>
+   <p align="esquerda">
+      As colunas que não incluem títulos exibem 'A ser descartado' em vez de mapear para
+     o Specify. Os títulos de coluna não mapeados serão excluídos se não forem mapeados para um Campo Specify antes de clicar em 'OK'.
+   </p>
+   <p align="esquerda">
+      Os botões na caixa de diálogo permitem que as colunas sejam mapeadas, não mapeadas, adicionadas, excluídas e
+     reordenado. A função de cada botão é descrita abaixo:
+   </p>
+   <table width="500" border="1" cellspacing="1" cellpadding="6">
+     <tr>
+       <td largura="50">
+         <img src="../images/Map16x16.png" alt="map" width="16" height="16">
+       </td>
+       <td largura="100">
+         <span class="index">Mapear</span>
+       </td>
+       <td>
+         Adiciona o campo à lista de colunas.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="../images/Unmap16x16.png" alt="unmap" width="16" height="16">
+        </td>
+        <td>
+          <span class="index">Não mapear</span>
+        </td>
+        <td>
+          Remove o campo da lista de colunas.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="../images/ReorderUp16x16.png" alt="reorderup" width="16" height="16">
+        </td>
+        <td>
+          <span class="index">Reordenar acima</span>
+        </td>
+        <td>
+          Move o campo selecionado para cima.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="../images/ReorderDown16x16.png" alt="reorderdown" width="16" height="16">
+        </td>
+        <td>
+          <span class="index">Reordenar abaixo</span>
+        </td>
+        <td>
+          Move o campo selecionado para baixo.
+        </td>
+      </tr>
+    </table>
+    <p>
+       &nbsp;
+    </p>
+    <p>
+       Para mapear uma coluna de conjunto de dados não mapeada para um campo Specify:
+    </p>
+    <ol>
+      <li>
+        Clique na coluna na janela do lado direito para selecioná-la.
+      </li>
+      <li>
+        Clique no Tipo de Dados para exibir os campos associados na janela 'Campos Specify'.
+      </li>
+      <li>
+        Clique no campo Specify necessário para selecioná-lo.
+      </li>
+      <li>
+        Clique no botão <img src="../images/Map16x16.png" alt="map" width="16" height="16"> (mapa).
+      </li>
+    </ol>
+    <p>
+       Para não mapear uma coluna de um campo:
+    </p>
+    <ol>
+      <li>
+        Clique na coluna na janela do lado direito para selecioná-la.
+      </li>
+      <li>
+        Clique em <img src="../images/Unmap16x16.png" alt="unmap" width="16" height="16"> (não mapear).
+      </li>
+    </ol>
+    <p>
+       Para adicionar uma coluna
+    </p>
+    <ol>
+      <li>
+        Clique no Tipo de Dados para mostrar os campos Specify na janela 'Campos'.
+      </li>
+      <li>
+        Clique no campo Specify.
+      </li>
+      <li>
+        Clique no botão <img src="../images/Map16x16.png" alt="map" width="16" height="16"> (mapa).
+      </li>
+    </ol>
+    <p>
+       Um ícone <img src="../images/linked_right.png" alt="link" width="32" height="16">&nbsp;(link)
+      aparecerá identificando que a coluna e o campo são o mesmo título.
+    </p>
+    <blockquote>
+      <p>
+         <em><strong>Nota:</strong></em> um campo só pode ser mapeado uma vez. Campos do Specify que são mapeados
+        exibem uma marca de seleção verde ao lado de seu nome na lista de campos, confirmando que
+        eles estão em uso.
+      </p>
+      <p>
+         <em><strong>Nota:</strong></em> Ao importar informações de Taxon, use apenas a Tabela de Taxon no editor de mapeamento.
+      </p>
+      <p>
+        <em><strong>Nota:</strong></em> A tabela Agente no editor de mapeamento só pode ser usada para
+       informações do agente. Ao carregar informações do agente junto com informações do objeto de coleção
+       use os campos Título do Catalogador, Nome, Nome do meio e Sobrenome na
+       Tabela de objetos de coleção.
+     </p>
+   </blockquote>
+   <p>
+      &nbsp;
+   </p>
+   <p>
+      Quando todas as colunas estiverem mapeadas e ordenadas corretamente, clique no botão 'OK'.
+   </p>
+   <p>
+      Conclua o processo de importação nomeando e descrevendo o novo conjunto de dados:
+   </p>
+   <p align="center">
+      <img src="../images/datasetproperties.png" alt="propriedades do conjunto de dados">
+   </p>
+   <p align="center" class="imgcaption">
+      Propriedades do conjunto de dados
+   </p>
+   <p align="esquerda">
+      &nbsp;
+   </p>
+   <p>
+      Para renomear os títulos das colunas, consulte <a href="../Workbench/FormEditing.html">Edição de formulário</a>.
+   </p>
+   <p>
+      &nbsp;
+   </p>
+   <blockquote>
+     <p>
+        <em><strong>Nota:</strong></em> quando o conjunto de dados abre, a validação para campos inválidos
+       será ativada. A validação pode ser desativada desmarcando o <em>Destacar células inválidas
+       </em> no painel de validação na parte inferior do WorkBench.
+     </p>
+   </blockquote>
+   <p align="center">
+      <img src="../../images/validation_screen.png" alt="" largura="562" altura="31">
+   </p>
+   <p align="center" class="imgcaption">
+      Painel de validação
+   </p>
+   <p>
+      &nbsp;
+   </p>
+   <p>
+      &nbsp;
+   </p>
+   <h3>
+      Importações erradas
+   </h3>
+   <p>
+      Arquivos do MS Excel que estão corrompidos ou não foram salvos corretamente não serão importados corretamente
+     no WorkBench. Um arquivo inválido pode aparecer no Editor de Mapeamento com um
+     cabeçalho parcial ou nenhum, de coluna ou exibir um aviso na parte inferior da janela do WorkBench:
+   </p>
+   <p>
+      &nbsp;
+   </p>
+   <p align="center">
+      <img src="../images/wrongfilewarning.png" alt="Aviso de arquivo errado">
+   </p>
+   <p align="center" class="imgcaption">
+      Aviso de arquivo errado
+   </p>
+ </body>
+</html>

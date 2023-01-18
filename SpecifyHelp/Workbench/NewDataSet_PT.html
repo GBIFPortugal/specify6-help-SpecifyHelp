@@ -1,0 +1,204 @@
+<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link href="../../main.css" rel="stylesheet" type="text/css" media="screen">
+    <meta name="generator" content="Helen">
+    <title>Novo conjunto de dados</title>
+  </head>
+  <corpo>
+    <table width="100%" border="0" background="../../images/topbar.png">
+      <tr>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+    </table>
+    <h2 class="index">
+       Novo conjunto de dados
+    </h2>
+    <p>
+       O primeiro passo na criação de um novo Conjunto de Dados é selecionar as colunas que serão incluídas no
+      o novo conjunto de dados. Isso é obtido reutilizando os títulos das colunas de um
+      Conjunto de dados ou criando uma lista de campos disponíveis no Specify.
+    </p>
+    <p>
+       Se existir um conjunto de dados com os mesmos cabeçalhos de coluna ou mapeamento necessários para o novo conjunto de dados,
+      basta arrastar o item Conjunto de Dados para a ação Novo Conjunto de Dados na barra lateral. Isso elimina
+      a necessidade de escolher um conjunto de dados em uma caixa de diálogo de arquivo.
+    </p>
+    <p>
+       <em><strong>Nota:</strong></em>
+    </p>
+    <ul>
+      <li>
+        Os conjuntos de dados têm um <span class="index">limite de 4000 registros</span>.
+      </li>
+      <li>
+        Os conjuntos de dados abertos no espaço de trabalho são desabilitados na barra lateral. Para <span class=
+        "index">copiar os cabeçalhos das colunas</span> de um conjunto de dados existente, ele deve primeiro ser fechado.
+      </li>
+    </ul>
+    <p>
+       Para ignorar o recurso de arrastar e soltar, clique no botão <img src="../../images/NewDataSet16x16.png"
+      width="16" height="16">&nbsp;botão Novo conjunto de dados na barra lateral. A caixa de diálogo a seguir irá
+      aparecer:
+    </p>
+    <p align="center">
+       <img src="../images/NewDataSet.png" alt="Novo conjunto de dados">
+    </p>
+    <p align="center" class="imgcaption">
+       Novo conjunto de dados
+    </p>
+    <p>
+       &nbsp;
+    </p>
+    <p>
+       Para copiar um mapa de conjunto de dados de um conjunto de dados existente, selecione <em><strong>Usar um mapeamento de dados existente.
+      </strong></em> e escolha o conjunto de dados na lista fornecida. O conjunto de dados
+      A caixa de diálogo Propriedades será aberta para nomear e descrever o novo conjunto de dados.
+    </p>
+    <p>
+       Para escolher os títulos das colunas para o novo conjunto de dados, selecione <em><strong>Criar novo mapeamento de dados</strong></em> e clique em 'OK'. O Editor de Mapeamento do Conjunto de Dados aparecerá:
+    </p>
+    <p align="center">
+       <img src="../images/DataSetMappingEditorClear.png" alt="Data Set Mapping Editor">
+    </p>
+    <p align="center" class="imgcaption">
+       Editor de mapeamento de conjuntos de dados
+    </p>
+    <p align="left">
+       &nbsp;
+    </p>
+    <p align="left">
+      O Editor de Mapeamento do Conjunto de Dados permite que as colunas sejam mapeadas, não mapeadas e reordenadas usando o
+     seguintes botões:
+   </p>
+   <table width="75%" border="1" cellspacing="1" cellpadding="6">
+     <tr>
+       <td largura="8%">
+         <img src="../images/Map16x16.png" alt="map" width="16" height="16">
+       </td>
+       <td width="14%" class="index">
+         Mapear
+       </td>
+       <td largura="78%">
+         Adiciona o campo à lista de colunas.
+       </td>
+     </tr>
+     <tr>
+       <td>
+         <img src="../images/Unmap16x16.png" alt="unmap" width="16" height="16">
+       </td>
+       <td class="index">
+         Não mapear
+       </td>
+       <td>
+         Remove o campo da lista de colunas.
+       </td>
+     </tr>
+     <tr>
+       <td>
+         <img src="../images/ReorderUp16x16.png" alt="reorderup" width="16" height="16">
+       </td>
+       <td class="index">
+         Reordenar acima
+       </td>
+       <td>
+         Move o campo selecionado para cima.
+       </td>
+     </tr>
+     <tr>
+       <td>
+         <img src="../images/ReorderDown16x16.png" alt="reorderdown" width="16" height="16">
+       </td>
+       <td class="index">
+         Reordenar abaixo
+       </td>
+       <td>
+         Move o campo selecionado para baixo.
+        </td>
+      </tr>
+    </table>
+    <p align="left">
+       &nbsp;
+    </p>
+    <p align="left">
+      O WorkBench fornece uma lista de campos que correspondem ao modelo de dados Specify para usar como coluna
+     de títulos, no novo conjunto de dados. A lista é organizada por Tipos de Dados.
+   </p>
+   <p align="esquerda">
+      Para adicionar um título de coluna:
+   </p>
+   <ol>
+     <li>
+       Selecione Tipos de Dados, e os campos disponíveis aparecerão na janela 'Campos do Specify'.
+     </li>
+     <li>
+       Selecione um campo
+     </li>
+     <li>
+       Clique no botão <img src="../images/Map16x16.png" alt="map" width="16" height="16"> (mapa)
+     </li>
+   </ol>
+   <p>
+      O novo título da coluna aparecerá em 'Campos do Specify' e 'Colunas do conjunto de dados' (como
+     mostrado abaixo).
+   </p>
+   <p align="esquerda">
+      Um ícone de link, (<img src="../images/linked_right.png" width="32" height="16">), confirma
+     que o campo Specify seja mapeado para a coluna Conjunto de dados.
+   </p>
+   <blockquote>
+     <p align="esquerda">
+        <em><strong>Nota:</strong></em> um campo só pode ser mapeado uma vez. Campos do Specify que são mapeados
+       exibirão uma marca de seleção verde ao lado de seu nome na lista de campos, confirmando que
+       eles estão em uso.
+     </p>
+     <p>
+        <em><strong>Nota:</strong></em> Ao importar informações de Taxon, use apenas a
+       Tabela de Taxon, no editor de mapeamento.
+     </p>
+      <p>
+        <em><strong>Nota:</strong></em> A tabela Agente no editor de mapeamento só pode ser usada para
+       informações do agente. Ao fazer upload de informações do agente junto com informações do objeto de coleção,
+       use os campos Título do Catalogador, Nome, Nome do meio e Sobrenome no
+       Tabela de objetos de coleção.
+     </p>
+     <p align="esquerda">
+        &nbsp;
+     </p>
+   </blockquote>
+   <p align="center">
+      <img src="../images/DataSetMappingEditor2.png">
+   </p>
+   <p align="center" class="imgcaption">
+      Editor de mapeamento de conjunto de dados com uma coluna adicionada
+   </p>
+   <p align="esquerda">
+      &nbsp;
+   </p>
+   <p align="esquerda">
+      Continue adicionando campos/colunas até que a lista "Colunas do conjunto de dados" esteja completa e clique em
+     'OK'.
+   </p>
+   <p align="esquerda">
+      Preencha o novo conjunto de dados nomeando-o e descrevendo-o:
+   </p>
+   <p align="center">
+      <img src="../images/datasetproperties.png" alt="Propriedades do conjunto de dados">
+   </p>
+   <p align="center" class="imgcaption">
+      Propriedades do conjunto de dados
+   </p>
+   <p align="esquerda">
+      &nbsp;
+   </p>
+   <p align="esquerda">
+      Para editar o mapeamento do conjunto de dados, consulte <a href="EditMapping.html">Editar mapeamento do conjunto de dados</a>.
+   </p>
+   <p align="esquerda">
+      &nbsp;
+   </p>
+ </body>
+</html>

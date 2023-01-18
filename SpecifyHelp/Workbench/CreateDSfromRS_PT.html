@@ -1,0 +1,272 @@
+<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link href="../../main.css" rel="stylesheet" type="text/css" media="screen">
+    <meta name="generator" content="Helen">
+    <title>Criar Conjunto de Dados a partir do Conjunto de Registros</title>
+  </head>
+  <body>
+    <table width="100%" border="0" background="../../images/topbar.png">
+      <tr>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+    </table>
+    <h2 class="index">
+       <a name="create" id="create"></a>Criar Conjunto de Dados a partir do Conjunto de Registros
+    </h2>
+    <p>
+       No Specify 6, pode-se criar um Conjunto de Dados WorkBench com base em um Conjunto de Registros do Specify. O conjunto de dados pode então ser exportado como uma planilha do Excel e importado para outro
+      bancos de dados do Specify.
+    </p>
+    <p>
+       Antes que um conjunto de registros possa ser convertido em um conjunto de dados, deve existir um mapeamento. Você pode reutilizar um mapeamento do conjunto de dados existente, nesse caso você pode ir diretamente para <a href=
+      "../RecordSet/record_set.html#create">Criar um conjunto de dados a partir do conjunto de registros</a>. Se um conjunto de dados
+      com um mapeamento duplicado não existe, então um mapeamento deve ser criado, criando também um
+      conjunto de dados vazio.
+    </p>
+    <h3>
+       Criar um mapeamento/conjunto de dados
+    </h3>
+    <div style=" margin-left: 0;">
+      <ol>
+        <li>
+          Clicar no botão <img src="../../images/NewDataSet16x16.png" alt="new" width="16" height="16">
+          <em>Novo conjunto de dados</em> na barra lateral.
+        </li>
+        <li style=" list-style-type: none; list-style-image: none;">
+          <blockquote>
+            <p align="center">
+               <img src="../images/NewDataSet.png" alt="New Data Set">
+            </p>
+            <p align="center" class="imgcaption">
+               Novo conjunto de dados
+            </p>
+          </blockquote>
+        </li>
+        <li>
+          Clicar no botão <em>Criar novo mapeamento de conjunto de dados</em>
+          <p>
+            Para escolher os títulos das colunas para o novo conjunto de dados, selecione o botão <strong><em>Criar Novo Mapeamento de Dados</em></strong> e clique no botão <em>OK</em>. O editor do mapeamento do conjunto de dados
+            aparecerá:
+          </p>
+          <p align="center">
+             <img src="../images/DataSetMappingEditorClear.png" alt="Data Set Mapping Editor">
+          </p>
+          <p align="center" class="imgcaption">
+             Editor do Mapeamento do Conjunto de Dados
+          </p>
+          <p align="left">
+             &nbsp;
+          </p>
+          <p align="left">
+             O Editor de mapeamento permite que as colunas sejam mapeadas, desmapeadas e reordenadas, usando
+            os seguintes botões:
+          </p>
+        </li>
+        <li style=" list-style-type: none; list-style-image: none;">
+          <table width="75%" border="1" cellspacing="1" cellpadding="6">
+            <tr>
+              <td width="8%">
+                <img src="../images/Map16x16.png" alt="map" width="16" height="16">
+              </td>
+              <td width="14%" class="index">
+                Mapa
+              </td>
+              <td width="78%">
+                Adiciona o campo a lista de colunas.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="../images/Unmap16x16.png" alt="unmap" width="16" height="16">
+              </td>
+              <td class="index">
+                Reverter mapeamento
+              </td>
+              <td>
+                Remove o campo da lista de colunas.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="../images/ReorderUp16x16.png" alt="reorderup" width="16" height="16">
+              </td>
+              <td class="index">
+                Reorganizar acima
+              </td>
+              <td>
+                Move o campo selecionado para cima
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="../images/ReorderDown16x16.png" alt="reorderdown" width="16" height="16">
+
+              </td>
+              <td class="index">
+                Reorganizar abaixo
+              </td>
+              <td>
+                Move o campo selecionado para cima.
+              </td>
+            </tr>
+          </table>
+          <blockquote>
+            <p align="left">
+               &nbsp;
+            </p>
+            <p align="left">
+              O WorkBench fornece uma lista de campos que correspondem ao modelo de dados Specify para usar como
+             cabeçalhos de coluna no novo conjunto de dados. A lista é organizada por Tipos de Dados, às vezes
+             chamados de Tabelas.
+            </p>
+          </blockquote>
+        </li>
+        <li>
+          Adicionar cabeçalho de coluna
+        </li>
+      </ol>
+      <blockquote>
+        <p>
+           1) Escolha o tipo de dados. Os campos disponíveis aparecerão na janela 'Campos Specify'.
+        </p>
+        <p>
+           2) Escolha o campo.
+        </p>
+        <p>
+           3) Clique em <img src="../images/Map16x16.png" alt="map" width="16" height=
+          "16">&nbsp;(mapa) botão.
+        </p>
+      </blockquote>
+    </div>
+    <blockquote>
+      <p>
+        O novo título da coluna aparecerá em 'Especificar campos' e 'Colunas do conjunto de dados' (como
+       mostrado abaixo).
+      </p>
+      <p align="left">
+        Um ícone de link, (<img src="../images/linked_right.png" alt="linked" width="32" height="16">),
+       confirma que o campo Especify está mapeado para a coluna Conjunto de dados.
+      </p>
+      <blockquote>
+        <p align="left">
+           <strong><em>Note:</em></strong> Um campo só pode ser mapeado uma vez. Os campos que forem
+          mapeado exibem uma marca de seleção verde, ao lado de seu nome na lista de campos Specify, confirmando
+          que estão em uso.
+        </p>
+        <p>
+           <strong><em>Note:</em></strong> Ao importar informações de Taxon, use apenas a Tabela Taxon Only
+          Tabela no editor de mapeamento.
+        </p>
+        <p>
+           <strong><em>Note:</em></strong> A tabela Agente, no editor de mapeamento, só pode ser usada
+          para informações do Agente. Ao fazer upload de informações do agente associadas a outras tabelas, use
+          a tabela apropriada como Catalogador, Determinador ou Coletor e seus respectivos
+          Campos.
+        </p>
+        <p align="left">
+           &nbsp;
+        </p>
+      </blockquote>
+      <p align="center">
+         <img src="../images/DataSetMappingEditor2.png" alt="editor">
+      </p>
+      <p align="center" class="imgcaption">
+         Editor de mapeamento de conjunto de dados com três colunas adicionadas
+      </p>
+      <p align="left">
+         &nbsp;
+      </p>
+      <p align="left">
+        Continue adicionando campos/colunas até que a lista "Colunas do conjunto de dados" esteja completa e clique em
+       'OK'.
+      </p>
+      <p align="left">
+         Complete o novo conjunto de dados/mapeamento nomeando-o e descrevendo-o:
+      </p>
+      <p align="center">
+         <img src="../images/datasetproperties.png" alt="Data Set Properties">
+      </p>
+      <p align="center" class="imgcaption">
+         Prioridades do conjunto de dados
+      </p>
+      <p>
+         &nbsp;
+      </p>
+    </blockquote>
+    <p>
+       &nbsp;
+    </p>
+    <h3>
+       <u><a name="create" id="create"></a></u>Criar conjunto de dados a partir do conjunto de registros
+    </h3>
+    <div style=" margin-left: 0;">
+      <ol>
+        <li>
+          Clique em <img src="../../images/NewDataSet16x16.png" alt="new" width="16" height="16">
+          <strong><em>Criar conjunto de dados a partir do botão Conjunto de Registros</em></strong>
+        </li>
+        <li>
+          Escolher conjunto de registros a partir da caixa de diálogo e selecionar o botão <strong><em>OK</em></strong>
+        </li>
+      </ol>
+      <blockquote>
+        <p>
+           A próxima caixa de diálogo listará os conjuntos de dados disponíveis.
+        </p>
+        <p>
+           <strong><em>Note:</em></strong> Se um Mapeamento não existir o processo irá parar e
+          nada mais acontecerá.
+        </p>
+      </blockquote>
+      <ol>
+        <li>
+          Escolha o conjunto de dados/mapeamento que precisa.
+        </li>
+        <li>
+          Clicar no botão 'OK'.
+        </li>
+      </ol>
+      <blockquote>
+        <p>
+           Na próxima caixa de diálogo, nomeie o novo conjunto de dados.
+        </p>
+        <p>
+           <strong><em>Nota:</em></strong> Os dados contidos em todos os registros, no conjunto de registros, serão
+          usado para preencher as colunas do conjunto de dados. Quando necessário, todos os dados em relacionamentos um-para-muitos será inserido nos campos relevantes. É importante incluir esses campos no mapeamento original e.g. se todos os registros no conjunto de registros tiverem dois coletores, é importante incluir colunas para Primeiro Nome, Sobrenome, iniciais do meio do nome, bem como nome do coletor 2, sobrenome, inicial do meio, para garantir
+          que todas as informações relevantes sejam preservadas para todos os registros.
+        </p>
+        <p>
+           <strong><em>Note:</em></strong> Quando o conjunto de dados é aberto, a validação para dados/campos inválidos
+          será ativada. Se o conjunto de dados tiver número de catálogo, eles serão marcados como
+          inválidos e destacados em vermelho, pois o Specify os reconhece como duplicados.
+          A validação pode ser desativada desmarcando a caixa de seleção <em>Destacar células inválidas</em>
+          no painel de validação na parte inferior da área de trabalho.
+        </p>
+        <p align="center">
+           <img src="../../images/validation_screen.png" alt="validation" width="562" height="31">
+        </p>
+      </blockquote>
+    </div>
+    <blockquote>
+      <p align="center" class="imgcaption">
+         Painel de validação
+      </p>
+      <blockquote>
+        <p>
+           <strong><em>Note:</em></strong> O mapeamento de um conjunto de dados criado a partir de um conjunto de registros pode
+          não ser editado.
+        </p>
+      </blockquote>
+    </blockquote>
+    <p class="index">
+       &nbsp;
+    </p>
+    <p>
+       &nbsp;
+    </p>
+  </body>
+</html>
