@@ -21,7 +21,7 @@ Siga os seguintes passos:
 
 ## Translation of Specify 6 Help files to Portuguese
 
-This repository contains the translation to English of the HTML files that make part of the **Help documentation** of Specify 6. It contains the [help documents of Specify 6](https://github.com/specify/specify6/tree/master/help), to which the Portuguese translated documents were added, as in the list bellow.
+This repository contains the translation to Portuguese of the HTML files that make part of the **Help documentation** of Specify 6. It contains the [help documents of Specify 6](https://github.com/specify/specify6/tree/master/help), to which the Portuguese translated documents were added, as in the list bellow.
 
 | Título/Title | Localização do ficheiro/File location | Link |
 |--------|-------------------------|------|
