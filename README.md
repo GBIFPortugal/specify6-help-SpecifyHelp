@@ -6,7 +6,20 @@ A tradução foi feita sobre uma selecção de documentos em formato HTML. No en
 
 A lista de ficheiros actualmente traduzidos está abaixo.
 
-## Translation of Specify 6 Help files to English
+## Eu quero ajudar a traduzir os documentos. Como é que eu faço?
+
+É possível ajudar neste projecto de tradução. A tradução é feita directamente dos ficheiros HTML. Em cada uma das directorias, para cada ficheiro HTML deverá ser criada a tradução, cujo ficheiro deverá ter o mesmo nome do original, mas com o sufixo `_PT`.
+
+Siga os seguintes passos:
+
+1. Faça um `fork` do repositório
+2. Faça `clone` para o seu computador
+3. Faça uma cópia do ficheiro que pretende traduzir, adicionando ao nome o sufixo `_PT`
+4. Traduza o conteúdo. Tenha em atenção não alterar as tags ou outras partes do código HTML
+5. Confirme o resultado da tradução, abrindo o ficheiro com o browser.
+6. Faça `push` para o repositório no GitHub e um `pull request`
+
+## Translation of Specify 6 Help files to Portuguese
 
 This repository contains the translation to English of the HTML files that make part of the **Help documentation** of Specify 6. It contains the [help documents of Specify 6](https://github.com/specify/specify6/tree/master/help), to which the Portuguese translated documents were added, as in the list bellow.
 
