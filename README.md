@@ -10,7 +10,7 @@ A lista de ficheiros actualmente traduzidos está abaixo.
 
 This repository contains the translation to English of the HTML files that make part of the **Help documentation** of Specify 6. It contains the [help documents of Specify 6](https://github.com/specify/specify6/tree/master/help), to which the Portuguese translated documents were added, as in the list bellow.
 
-| Título | Localização do ficheiro | Link |
+| Título/Title | Localização do ficheiro/File location | Link |
 |--------|-------------------------|------|
 | Introdução ao Specify | ./SpecifyHelp/Intro/intro_PT.html | [pdf](./pdf/Introducao_ao_Specify.pdf) \| [html](./SpecifyHelp/Intro/intro_PT.html) |
 | Visão geral do WorkBench | ./SpecifyHelp/Workbench/Overview_PT.html | [pdf](./pdf/Visao_geral_do_WorkBench.pdf) \| [html](./SpecifyHelp/Workbench/Overview_PT.html) |
